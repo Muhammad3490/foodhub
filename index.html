@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Book</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="sizing.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="nv-list"><a href="#Home">Home</a></li>
+          <li class="nv-list" id="contact">
+            Contact <i class="fa-solid fa-caret-down"></i>
+            <ul class="sub-list">
+              <li class="sub-list-item">Email</li>
+              <li class="sub-list-item">Phone</li>
+              <li class="sub-list-item">Instagram</li>
+            </ul>
+          </li>
+          <li class="nv-list"><a href="#recipe-container">Recipes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="main-container main-bg p-x" id="Home">
+        <div class="grid">
+          <div class="main-heading">
+            <h1>Food Hub</h1>
+          </div>
+          <div class="main-sub-head">
+            <h2>
+              Even better than your <br />
+              expensive cooking book.
+            </h2>
+          </div>
+          <div class="form-container">
+            <form action="">
+              <label for="search">
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  class="search-bar"
+                  placeholder="Look for something"
+                />
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </label>
+            </form>
+          </div>
+          <div class="button-container">
+            <div class="button-container">
+              <button class="primary-btn-color"><a href="#form">Create Recipes</a></button>
+            </div>
+            <div class="button-container">
+              <button class="primary-btn-outline"><a href="#recipe-container">Show Previous Recipes</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container2 p-x bg-blue" id="form">
+        <div class="grid">
+          <div class="main-sub-head p-x">
+            <h2>Create a Recipe</h2>
+          </div>
+          <div class="flex">
+            <p class="main-p">Here you can create and save your recipes.</p>
+          </div>
+          <!-- creating the from       -->
+          <div class="flex p-xl">
+            <div class="form-container2">
+              <form action="">
+                <div class="main-sub-head">
+                  <h3>Make your recipe</h3>
+                </div>
+                <label for="title">
+                  <p>Title :</p>
+                  <div class="input-with-microphone">
+                    <input type="text" name="" id="title">
+                    <i class="fas fa-microphone microphone-icon" onclick="startVoiceTyping(this)"></i>
+                  </div>
+                </label>
+          
+                <label for="category">Choose a category:</label>
+                  <select id="category" name="type">
+                    <option value="normalRecipe">Normal Recipe</option>
+                    <option value="sweetDish">Sweet Dish</option>
+                    <option value="drinkRecipe">Drink Recipe</option>
+                  </select>
+                
+          
+                <label for="indgredients">
+                  <p>Indgredients :</p>
+                  <div class="input-with-microphone">
+                    <textarea name="" id="ind" cols="35" rows="10"></textarea>
+                    <i class="fas fa-microphone microphone-icon" onclick="startVoiceTyping(this)"></i>
+                  </div>
+                </label>
+          
+                <label for="procedure">
+                  <p>Procedure :</p>
+                  <div class="input-with-microphone">
+                    <textarea name="" id="procedure" cols="35" rows="10"></textarea>
+                    <i class="fas fa-microphone microphone-icon" onclick="startVoiceTyping(this)"></i>
+                  </div>
+                </label>
+                <div class="button-container">
+                  <button class="primary-btn-color" id="submit-btn">
+                    Submit recipe
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          </div>
+      </div>
+      <div class="main-container3 bg-blue-bottom" id="recipe-container">
+        <div class="grid m-x" p-xl>
+          <div class="flex">
+            <h2 class="main-sub-head">Your Recipes</h2>
+          </div>
+          <div class="flex">
+            <p>Here you can acess your recipes.</p>
+          </div>
+          <div class="flex m-x" id="card-display">
+
+          </div>
+        </div>
+      </div>
+    </main>
+   <footer id="footer">
+    <ul>
+      <li><h4>&copy; 2023 Food Hub </h4></li>
+      <li> 
+        <h5>
+        Created by <a href="https://muhammad3490.github.io/web-dev/">Muhammad.</a>
+       </h5>
+      </li>
+    </ul>
+       
+      
+   </footer>
+
+
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
